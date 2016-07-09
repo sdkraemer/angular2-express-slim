@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var users = require('./routes/users');
+var workouts = require('./routes/workouts');
 
 var app = express();
 
@@ -15,6 +16,7 @@ if (app.get('env') !== 'production') {
   app.use(express.static(__dirname + "/node_modules"));
 }
 
+console.log('**************HERE I AM');
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -26,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'app')));
 
 app.use('/users', users);
+app.use('/workouts', workouts);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

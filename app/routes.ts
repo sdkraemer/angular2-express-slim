@@ -5,11 +5,12 @@ import { Type } from '@angular/core';
 import {ComponentResolver, SystemJsComponentResolver} from '@angular/core';
 import {RuntimeCompiler} from '@angular/compiler';
 
-import { HomeComponent } from './components/home/home.component';
+import { WorkoutsComponent } from './workout/workouts.component';
+//import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 
 const routes: RouterConfig = [
-    { path: '', component: <Type>HomeComponent, terminal: true },
+    { path: '', component: <Type>WorkoutsComponent, terminal: true },
     { path: 'about', component: <Type>AboutComponent }
 ];
 

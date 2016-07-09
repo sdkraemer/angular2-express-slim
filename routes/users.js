@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.json({
     name: "John",
-    last: "Smith"
+    last: "Testerooni"
   });
 });
 
